@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,109 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BirdInCage" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oZy-wO-w4B">
+                                <rect key="frame" x="0.0" y="10" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Bird In Cage Illusion" id="yx2-YX-EFW"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xc-WZ-UF0">
+                                <rect key="frame" x="160" y="448" width="55" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rb-xF-Ngc">
+                                <rect key="frame" x="278" y="435" width="30" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="fastButtonPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="aWA-5M-da5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eN-Uz-abe">
+                                <rect key="frame" x="162" y="321" width="52" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="DK8-dx-NWo"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bird" translatesAutoresizingMaskIntoConstraints="NO" id="rVc-h4-mkn">
+                                <rect key="frame" x="121" y="180" width="132" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="gY1-U3-y0F"/>
+                                    <constraint firstAttribute="width" constant="132" id="iZr-5H-1Iu"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cage" translatesAutoresizingMaskIntoConstraints="NO" id="7BK-jz-Qu1">
+                                <rect key="frame" x="16" y="60" width="343" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="215" id="QW5-GS-Nwh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPm-7P-SV8">
+                                <rect key="frame" x="72" y="435" width="30" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="slowButtonPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="37Y-1G-id9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rVc-h4-mkn" firstAttribute="top" secondItem="oZy-wO-w4B" secondAttribute="bottom" constant="125.5" id="77q-LF-QNL"/>
+                            <constraint firstItem="0xc-WZ-UF0" firstAttribute="top" secondItem="0eN-Uz-abe" secondAttribute="bottom" constant="85" id="Jff-hU-72V"/>
+                            <constraint firstItem="KPm-7P-SV8" firstAttribute="top" secondItem="7BK-jz-Qu1" secondAttribute="bottom" constant="160" id="PCJ-6G-dmk"/>
+                            <constraint firstItem="oZy-wO-w4B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UcP-YB-myo"/>
+                            <constraint firstItem="0eN-Uz-abe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V9I-qz-iOH"/>
+                            <constraint firstItem="oZy-wO-w4B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VA9-d5-nus"/>
+                            <constraint firstItem="KPm-7P-SV8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="WlV-DC-ppH"/>
+                            <constraint firstItem="rVc-h4-mkn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XPy-1P-t3N"/>
+                            <constraint firstItem="7BK-jz-Qu1" firstAttribute="top" secondItem="oZy-wO-w4B" secondAttribute="bottom" constant="6" id="dgx-Ux-hYX"/>
+                            <constraint firstItem="0xc-WZ-UF0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eLF-pq-OEC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9rb-xF-Ngc" secondAttribute="trailing" constant="67" id="et2-pz-eta"/>
+                            <constraint firstItem="0eN-Uz-abe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gls-Ve-ZvW"/>
+                            <constraint firstItem="9rb-xF-Ngc" firstAttribute="top" secondItem="7BK-jz-Qu1" secondAttribute="bottom" constant="160" id="hjS-hp-bSN"/>
+                            <constraint firstItem="oZy-wO-w4B" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="10" id="htR-it-ZR1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0eN-Uz-abe" secondAttribute="trailing" id="iaJ-Pv-W4Z"/>
+                            <constraint firstItem="7BK-jz-Qu1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j0g-Bx-kaP"/>
+                            <constraint firstItem="0xc-WZ-UF0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KPm-7P-SV8" secondAttribute="trailing" id="lJz-ik-waV"/>
+                            <constraint firstItem="rVc-h4-mkn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="121" id="num-Nz-lLV"/>
+                            <constraint firstItem="0xc-WZ-UF0" firstAttribute="top" secondItem="0eN-Uz-abe" secondAttribute="bottom" constant="85" id="oAf-hH-v70"/>
+                            <constraint firstItem="0xc-WZ-UF0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KPm-7P-SV8" secondAttribute="trailing" id="stt-jz-XJc"/>
+                            <constraint firstItem="9rb-xF-Ngc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0xc-WZ-UF0" secondAttribute="trailing" id="tCf-Fc-hau"/>
+                            <constraint firstItem="9rb-xF-Ngc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0xc-WZ-UF0" secondAttribute="trailing" id="ubs-kz-Iwr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7BK-jz-Qu1" secondAttribute="trailing" constant="16" id="uxZ-kE-Oo1"/>
+                            <constraint firstItem="7BK-jz-Qu1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="x2M-h7-4BN"/>
+                            <constraint firstItem="0eN-Uz-abe" firstAttribute="top" secondItem="7BK-jz-Qu1" secondAttribute="bottom" constant="46" id="xPc-fA-Ud8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rVc-h4-mkn" secondAttribute="trailing" constant="122" id="xWn-3x-BXq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="birdImage" destination="rVc-h4-mkn" id="AAa-K7-U5D"/>
+                        <outlet property="birdImageCenterXConstraint" destination="XPy-1P-t3N" id="aGY-hG-56e"/>
+                        <outlet property="cageImage" destination="7BK-jz-Qu1" id="lNA-E9-Djf"/>
+                        <outlet property="cageImageCenterXConstraint" destination="j0g-Bx-kaP" id="ogo-pB-YKu"/>
+                        <outlet property="fastButton" destination="9rb-xF-Ngc" id="jil-Vo-Q9u"/>
+                        <outlet property="slowButton" destination="KPm-7P-SV8" id="odw-hJ-m8v"/>
+                        <outlet property="startButton" destination="0eN-Uz-abe" id="rem-Np-VBd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Bird" width="1325" height="992"/>
+        <image name="Cage" width="1023" height="1024"/>
+    </resources>
 </document>
