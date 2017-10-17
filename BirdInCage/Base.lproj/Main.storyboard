@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -66,17 +66,25 @@
                                     <action selector="slowButtonPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="37Y-1G-id9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6R-yK-n91">
+                                <rect key="frame" x="184" y="479" width="8.5" height="23"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rVc-h4-mkn" firstAttribute="top" secondItem="oZy-wO-w4B" secondAttribute="bottom" constant="125.5" id="77q-LF-QNL"/>
                             <constraint firstItem="0xc-WZ-UF0" firstAttribute="top" secondItem="0eN-Uz-abe" secondAttribute="bottom" constant="85" id="Jff-hU-72V"/>
                             <constraint firstItem="KPm-7P-SV8" firstAttribute="top" secondItem="7BK-jz-Qu1" secondAttribute="bottom" constant="160" id="PCJ-6G-dmk"/>
+                            <constraint firstItem="U6R-yK-n91" firstAttribute="top" secondItem="0xc-WZ-UF0" secondAttribute="bottom" constant="8" id="SvR-Uv-niT"/>
                             <constraint firstItem="oZy-wO-w4B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UcP-YB-myo"/>
                             <constraint firstItem="0eN-Uz-abe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V9I-qz-iOH"/>
                             <constraint firstItem="oZy-wO-w4B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VA9-d5-nus"/>
                             <constraint firstItem="KPm-7P-SV8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="WlV-DC-ppH"/>
                             <constraint firstItem="rVc-h4-mkn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XPy-1P-t3N"/>
+                            <constraint firstItem="U6R-yK-n91" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZrU-ZY-g7w"/>
                             <constraint firstItem="7BK-jz-Qu1" firstAttribute="top" secondItem="oZy-wO-w4B" secondAttribute="bottom" constant="6" id="dgx-Ux-hYX"/>
                             <constraint firstItem="0xc-WZ-UF0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eLF-pq-OEC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9rb-xF-Ngc" secondAttribute="trailing" constant="67" id="et2-pz-eta"/>
@@ -105,6 +113,7 @@
                         <outlet property="cageImageCenterXConstraint" destination="j0g-Bx-kaP" id="ogo-pB-YKu"/>
                         <outlet property="fastButton" destination="9rb-xF-Ngc" id="jil-Vo-Q9u"/>
                         <outlet property="slowButton" destination="KPm-7P-SV8" id="odw-hJ-m8v"/>
+                        <outlet property="speedLabel" destination="U6R-yK-n91" id="GBo-n1-oGS"/>
                         <outlet property="startButton" destination="0eN-Uz-abe" id="rem-Np-VBd"/>
                     </connections>
                 </viewController>
